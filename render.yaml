@@ -16,5 +16,3 @@ services:
     envVars:
       - key: ENV
         value: prod
-      - key: ENV
-        value: prod
