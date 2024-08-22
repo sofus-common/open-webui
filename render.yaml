@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: open-webui
+    plan: starter
+    region: oregon
+    runtime: image
+    image:
+      url: ghcr.io/open-webui/open-webui:main
+    numInstances: 1
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 5
+    healthCheckPath: /health/liveliness
+    autoDeploy: true
+    envVars:
+      - key: ENV
+        value: prod
+      - key: ENV
+        value: prod
